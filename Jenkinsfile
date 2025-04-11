@@ -1,10 +1,8 @@
-@Library('my-shared-lib-jenkins')
+@Library('my-shared-lib-jenkins') _
 pipeline {
-    agent {
-        any
-    }
+    agent any
     stages {
-        stage {
+        stage("Hello Stage") {
             steps {
                 script {
                     echo "Retrieving the value and the value is " + printHello.printString("Animesh")
